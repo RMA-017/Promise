@@ -3,12 +3,17 @@
 // function promiseWithTimeout(promise, timeout) {
 //   // Sizning kodingiz
 // }
+async function main(belgilanganVaqt, timeout) {
 
-
-async function prom(promise, timeout) {
-    try {
-
-    } catch {
-
+    if (belgilanganVaqt >= timeout) {
+        let prom = new Promise(res => {
+            res("OK")
+        })
+            .then(res => {
+                console.log(res);
+            })
+    } else {
+        console.log("timeout error");
     }
 }
+main(1000, 2000)
